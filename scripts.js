@@ -1,7 +1,7 @@
 console.log('Hello,World');
 let firstName='John';
 console.log(firstName);
-let age = '20';
+//let age = '20';
 
 //numbers
 let num = 10.56;
@@ -56,8 +56,74 @@ console.log(lastName);
 console.log(typeof lastName);
 
 //null
-let gender =null;
-console.log(gender);
-console.log(typeof gender);
+//let gender =null;
+//console.log(gender);
+//console.log(typeof gender);
+
+let name = 'John';
+let age =30;
+let isStudent =true;
+let gender = 'male';
+
+let person = {
+    name: 'John',
+    age: 30,
+    isStudent:true,
+    gender:'male',
+    address:{
+        city: 'Nairobi',
+        street: 'Mpaka Road',
+    },
+};
+person.age=50 //Changing values for data in an object
+person.address.street= "kibiku street";
+
+console.log(person.age);
+console.log(person.address.street);
+person['name']= "Seth";
+console.log(person.age);
+console.log(person['gender']);
+console.log(person.name);
 
 
+//Arrays (list of items used of storing ordered list of items)
+
+const laptops = ['Macbook', 'HP', 'Lenovo', 'Dell'];
+console.log(laptops);
+
+let mixedArray = ['John', true, 40, null, undefined, {gender:'male'}]
+
+console.log(mixedArray);
+console.log(laptops[1]);
+console.log(mixedArray[5].gender);
+console.log(mixedArray.length);
+
+laptops.push("Toshiba"); //Adding to indefinite position 
+laptops.unshift('Asus'); //adding at the beginning
+laptops.splice(2, 0, 'Acer') //Adding to Specific position
+console.log(laptops);
+console.log(laptops.indexOf('Dell')); // Knowing the position of an item in the list
+
+laptops.pop(); //removing the last in the list
+laptops.shift(); // removing first in the list
+laptops.splice(2, 1); //removing from a specific location
+console.log(laptops);
+
+const sortedArray = laptops.sort()
+console.log(sortedArray);
+
+const reversedArray = sortedArray.reverse();
+console.log(reversedArray);
+
+const people = [
+    {name:'Seth', class: 7, Subject: 'English', Teacher: 'Dan'},
+    {name:'Jane', class: 5, Subject: 'Kisawahili', Teacher: 'Frank'},
+    {name:'Lawi', class: 4, Subject: 'Science', Teacher: 'Dan'},
+    {name:'Belinda', class: 7, Subject: 'SST', Teacher: 'Frank'},
+    {name:'Otoyo', class: 5, Subject: 'SST', Teacher: 'Dan'},
+];
+
+const groupedByName = Object.groupBy(people,(people) =>people.name);
+console.log(groupedByName);
+const groupedBySubject = Object.groupBy(people,(people) =>people.Subject);
+console.log(groupedBySubject);
