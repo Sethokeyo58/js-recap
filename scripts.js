@@ -127,3 +127,27 @@ const groupedByName = Object.groupBy(people,(people) =>people.name);
 console.log(groupedByName);
 const groupedBySubject = Object.groupBy(people,(people) =>people.Subject);
 console.log(groupedBySubject);
+   
+
+//Functions 
+function functionName(parameters){  
+    //code to be executed
+}; // This is the formula for function declaration/Expression
+
+function LFunction(a,b){
+    return a * b
+}
+console.log(LFunction);
+
+
+function sayHello(name){
+    console.log(`Hello ${name}`);
+}
+sayHello('John')
+
+
+const sayHellow = function(name) {
+    return "Hello, " + name + "!";
+};
+
+console.log(sayHellow("Bob"));
